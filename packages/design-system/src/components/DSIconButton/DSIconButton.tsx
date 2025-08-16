@@ -1,57 +1,53 @@
 import React from 'react';
-import { Button, ButtonProps } from '@mui/material';
+import { IconButton, IconButtonProps } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
-export interface DSButtonProps extends ButtonProps {
+export interface DSIconButtonProps extends Omit<IconButtonProps, 'size' | 'startIcon' | 'endIcon'> {
   buttonVariant?: 'filled' | 'tonal' | 'outlined' | 'text';
-  buttonSize?: 'standard' | 'small';
+  buttonSize?: 'small' | 'standard';
   loading?: boolean;
+  children: React.ReactElement; // Only allow a single icon element
 }
 
-// Loading dots animation component
-const LoadingDots = styled('div')({
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  gap: '6px',
-  '& .dot': {
-    width: '6px',
-    height: '6px',
-    borderRadius: '50%',
-    backgroundColor: 'currentColor',
-    animation: 'pulse 1.4s ease-in-out infinite both',
-  },
-  '& .dot:nth-of-type(1)': {
-    animationDelay: '-0.32s',
-  },
-  '& .dot:nth-of-type(2)': {
-    animationDelay: '-0.16s',
-  },
-  '@keyframes pulse': {
-    '0%, 80%, 100%': {
-      transform: 'scale(0)',
-      opacity: 0.5,
+// Spinner animation component
+const Spinner = styled('div')({
+  width: '24px',
+  height: '24px',
+  border: '2px solid transparent',
+  borderTop: '2px solid currentColor',
+  borderRadius: '50%',
+  animation: 'spin 1s linear infinite',
+  '@keyframes spin': {
+    '0%': {
+      transform: 'rotate(0deg)',
     },
-    '40%': {
-      transform: 'scale(1)',
-      opacity: 1,
+    '100%': {
+      transform: 'rotate(360deg)',
     },
   },
 });
 
-const StyledButton = styled(Button)<{ buttonVariant?: string; loading?: boolean; buttonSize?: string }>(({ theme, buttonVariant, loading, buttonSize }) => {
-  const baseHeight = buttonSize === 'small' ? 40 : 48;
+const StyledIconButton = styled(IconButton)<{ 
+  buttonVariant?: string; 
+  loading?: boolean; 
+  buttonSize?: string 
+}>(({ theme, buttonVariant, loading, buttonSize }) => {
+  // Size mapping for icon buttons
+  const sizeMap = {
+    small: 40,
+    standard: 48,
+  };
+  
+  const baseSize = sizeMap[buttonSize as keyof typeof sizeMap] || 48;
   
   return {
-    textTransform: 'none',
-    borderRadius: '12px',
-    fontWeight: 600,
-    minWidth: 131,
-    height: baseHeight,
+    width: baseSize,
+    height: baseSize,
+    borderRadius: '50%',
     transition: 'all 0.2s ease-in-out',
     
-    // Base contained button styles (for filled variant)
-    '&.MuiButton-contained': {
+    // Base filled variant styles
+    '&.MuiIconButton-root': {
       backgroundColor: theme.palette.schemes.primary,
       color: theme.palette.schemes.onPrimary,
       '&:hover': {
@@ -60,8 +56,7 @@ const StyledButton = styled(Button)<{ buttonVariant?: string; loading?: boolean;
         boxShadow: `0px 2px 6px 2px ${theme.palette.neutral.surfaceOpacity16}, 0px 1px 2px 0px ${theme.palette.neutral.surfaceOpacity8}`,
       },
       '&:focus': {
-        background: `linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
-        ${theme.palette.schemes.primary}`,
+        background: `linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), ${theme.palette.schemes.primary}`,
         color: theme.palette.schemes.onPrimary,
       },
       '&:disabled': {
@@ -72,7 +67,7 @@ const StyledButton = styled(Button)<{ buttonVariant?: string; loading?: boolean;
     
     // Tonal variant styles
     ...(buttonVariant === 'tonal' && {
-      '&.MuiButton-contained': {
+      '&.MuiIconButton-root': {
         backgroundColor: theme.palette.schemes.primaryContainer,
         color: theme.palette.schemes.primary,
         '&:hover': {
@@ -81,8 +76,7 @@ const StyledButton = styled(Button)<{ buttonVariant?: string; loading?: boolean;
           boxShadow: `0px 2px 6px 2px ${theme.palette.neutral.surfaceOpacity16}, 0px 1px 2px 0px ${theme.palette.neutral.surfaceOpacity8}`,
         },
         '&:focus': {
-            background: `linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
-          ${theme.palette.schemes.primaryContainer}`,
+          background: `linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), ${theme.palette.schemes.primaryContainer}`,
           color: theme.palette.schemes.primary,
         },
         '&:disabled': {
@@ -94,7 +88,7 @@ const StyledButton = styled(Button)<{ buttonVariant?: string; loading?: boolean;
     
     // Outlined variant styles
     ...(buttonVariant === 'outlined' && {
-      '&.MuiButton-outlined': {
+      '&.MuiIconButton-root': {
         backgroundColor: 'transparent',
         color: theme.palette.schemes.primary,
         border: `1px solid ${theme.palette.schemes.primary}`,
@@ -104,8 +98,7 @@ const StyledButton = styled(Button)<{ buttonVariant?: string; loading?: boolean;
           border: `1px solid ${theme.palette.schemes.primary}`,
         },
         '&:focus': {
-          background: `linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
-          ${theme.palette.schemes.primaryContainer}`,
+          background: `linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), ${theme.palette.schemes.primaryContainer}`,
           color: theme.palette.schemes.primary,
           border: `1px solid ${theme.palette.schemes.primary}`,
         },
@@ -116,25 +109,25 @@ const StyledButton = styled(Button)<{ buttonVariant?: string; loading?: boolean;
         },
       },
     }),
-    
+
     // Text variant styles
     ...(buttonVariant === 'text' && {
-      '&.MuiButton-text': {
-        backgroundColor: 'transparent',
-        color: theme.palette.schemes.primary,
-        '&:hover': {
-          backgroundColor: theme.palette.neutral.surfaceOpacity8,
-        },
-        '&:focus': {
-          backgroundColor: theme.palette.neutral.surfaceOpacity12,
-        },
-        '&:disabled': {
+        '&.MuiIconButton-root': {
           backgroundColor: 'transparent',
-          color: theme.palette.neutralVariant[50],
+          color: theme.palette.schemes.primary,
+          '&:hover': {
+            backgroundColor: theme.palette.neutral.surfaceOpacity8,
+          },
+          '&:focus': {
+            backgroundColor: theme.palette.neutral.surfaceOpacity12,
+          },
+          '&:disabled': {
+            backgroundColor: 'transparent',
+            color: theme.palette.neutralVariant[50],
+          },
         },
-      },
-    }),
-    
+      }),
+      
     // Loading state styles for each variant
     ...(loading && buttonVariant === 'filled' && {
       backgroundColor: theme.palette.schemes.primary,
@@ -151,7 +144,7 @@ const StyledButton = styled(Button)<{ buttonVariant?: string; loading?: boolean;
       color: theme.palette.schemes.primary,
       border: `1px solid ${theme.palette.schemes.primary}`,
     }),
-    
+
     ...(loading && buttonVariant === 'text' && {
       backgroundColor: 'transparent',
       color: theme.palette.schemes.primary,
@@ -159,72 +152,32 @@ const StyledButton = styled(Button)<{ buttonVariant?: string; loading?: boolean;
   };
 });
 
-export const DSButton: React.FC<DSButtonProps> = ({
+export const DSIconButton: React.FC<DSIconButtonProps> = ({
   children,
   buttonVariant = 'filled',
-  buttonSize = 'small',
+  buttonSize = 'standard',
   loading = false,
   disabled,
-  startIcon,
-  endIcon,
   ...props
 }) => {
-  // Map custom variants to MUI variants and colors
-  let muiVariant: 'contained' | 'outlined' | 'text';
-  let muiColor: 'primary' | 'inherit' = 'primary';
-  
-  switch (buttonVariant) {
-    case 'filled':
-      muiVariant = 'contained';
-      muiColor = 'primary';
-      break;
-    case 'tonal':
-      muiVariant = 'contained';
-      muiColor = 'primary';
-      break;
-    case 'outlined':
-      muiVariant = 'outlined';
-      muiColor = 'primary';
-      break;
-    case 'text':
-      muiVariant = 'text';
-      muiColor = 'primary';
-      break;
-    default:
-      muiVariant = 'contained';
-      muiColor = 'primary';
-  }
-  
-  const muiSize = buttonSize === 'standard' ? 'medium' : buttonSize;
   // Only disable if explicitly disabled, not when loading
   const isDisabled = disabled;
   
   return (
-    <StyledButton 
+    <StyledIconButton 
       buttonVariant={buttonVariant}
-      variant={muiVariant} 
-      size={muiSize} 
-      color={muiColor}
       disabled={isDisabled}
       loading={loading}
       buttonSize={buttonSize}
-      startIcon={startIcon}
-      endIcon={endIcon}
       {...props}
     >
       {loading ? (
-        <LoadingDots>
-          <div className="dot"></div>
-          <div className="dot"></div>
-          <div className="dot"></div>
-        </LoadingDots>
+        <Spinner data-testid="loading-spinner" />
       ) : (
-        <>
-          {children}
-        </>
+        children
       )}
-    </StyledButton>
+    </StyledIconButton>
   );
 };
 
-export default DSButton;
+export default DSIconButton;

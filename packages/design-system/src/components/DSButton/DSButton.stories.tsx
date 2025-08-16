@@ -1,87 +1,150 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { DSButton } from './DSButton';
+import { Add, ArrowForward, Home, Settings } from '@mui/icons-material';
 
-const meta = {
+const meta: Meta<typeof DSButton> = {
   title: 'Components/DSButton',
   component: DSButton,
   parameters: {
     layout: 'centered',
   },
   tags: ['autodocs'],
+  decorators: [
+    (Story) => (
+      <div style={{ fontFamily: 'Arial, sans-serif' }}>
+        <Story />
+      </div>
+    ),
+  ],
   argTypes: {
-    variant: {
+    buttonVariant: {
       control: { type: 'select' },
-      options: ['contained', 'outlined', 'text'],
+      options: ['filled', 'tonal', 'outlined', 'text'],
     },
-    size: {
+    buttonSize: {
       control: { type: 'select' },
-      options: ['small', 'medium', 'large'],
-    },
-    color: {
-      control: { type: 'select' },
-      options: ['primary', 'secondary', 'success', 'error', 'info', 'warning'],
+      options: ['standard', 'small'],
     },
     disabled: {
       control: { type: 'boolean' },
     },
+    loading: {
+      control: { type: 'boolean' },
+    },
+    startIcon: {
+      control: { type: 'select' },
+      options: ['none', 'add', 'home', 'settings'],
+      mapping: {
+        none: undefined,
+        add: <Add />,
+        home: <Home />,
+        settings: <Settings />,
+      },
+    },
+    endIcon: {
+      control: { type: 'select' },
+      options: ['none', 'arrow', 'settings'],
+      mapping: {
+        none: undefined,
+        arrow: <ArrowForward />,
+        settings: <Settings />,
+      },
+    },
   },
-} satisfies Meta<typeof DSButton>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Primary: Story = {
+export const Filled: Story = {
   args: {
-    children: 'Primary Button',
-    variant: 'contained',
-    color: 'primary',
+    children: 'متن دکمه',
+    buttonVariant: 'filled',
+    buttonSize: 'small',
   },
 };
 
-export const Secondary: Story = {
+export const Tonal: Story = {
   args: {
-    children: 'Secondary Button',
-    variant: 'contained',
-    color: 'secondary',
+    children: 'متن دکمه',
+    buttonVariant: 'tonal',
+    buttonSize: 'small',
   },
 };
 
 export const Outlined: Story = {
   args: {
-    children: 'Outlined Button',
-    variant: 'outlined',
-    color: 'primary',
+    children: 'متن دکمه',
+    buttonVariant: 'outlined',
+    buttonSize: 'small',
   },
 };
 
 export const Text: Story = {
   args: {
-    children: 'Text Button',
-    variant: 'text',
-    color: 'primary',
+    children: 'متن دکمه',
+    buttonVariant: 'text',
+    buttonSize: 'small',
+  },
+};
+
+export const Standard: Story = {
+  args: {
+    children: 'متن دکمه',
+    buttonSize: 'standard',
+    buttonVariant: 'filled',
   },
 };
 
 export const Small: Story = {
   args: {
-    children: 'Small Button',
-    size: 'small',
-    variant: 'contained',
+    children: 'متن دکمه',
+    buttonSize: 'small',
+    buttonVariant: 'filled',
   },
 };
 
-export const Large: Story = {
+export const Loading: Story = {
   args: {
-    children: 'Large Button',
-    size: 'large',
-    variant: 'contained',
+    children: 'متن دکمه',
+    buttonVariant: 'filled',
+    buttonSize: 'small',
+    loading: true,
   },
 };
 
 export const Disabled: Story = {
   args: {
-    children: 'Disabled Button',
+    children: 'متن دکمه',
     disabled: true,
-    variant: 'contained',
+    buttonVariant: 'filled',
+  },
+};
+
+export const WithStartIcon: Story = {
+  args: {
+    children: 'متن دکمه',
+    buttonVariant: 'filled',
+    buttonSize: 'small',
+    startIcon: <Add />,
+  },
+};
+
+export const WithEndIcon: Story = {
+  args: {
+    children: 'متن دکمه',
+    buttonVariant: 'filled',
+    buttonSize: 'small',
+    endIcon: <ArrowForward />,
+  },
+};
+
+export const WithBothIcons: Story = {
+  args: {
+    children: 'متن دکمه',
+    buttonVariant: 'filled',
+    buttonSize: 'small',
+    startIcon: <Home />,
+    endIcon: <ArrowForward />,
   },
 };
