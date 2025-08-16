@@ -1,0 +1,40 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p smartx-monorepo/{apps/{club,evaluation},packages/{ui,auth-client},bff})",
+      "Bash(mkdir:*)",
+      "Bash(dotnet new:*)",
+      "Bash(npm create:*)",
+      "Bash(pnpm install:*)",
+      "Bash(pnpm build:*)",
+      "Bash(pnpm dev:*)",
+      "Bash(pnpm add:*)",
+      "Bash(curl:*)",
+      "Bash(lsof:*)",
+      "Bash(pkill:*)",
+      "Bash(true)",
+      "Bash(open http://localhost:3000)",
+      "Bash(dotnet --version)",
+      "Bash(redis-cli:*)",
+      "Bash(brew services start:*)",
+      "Bash(dotnet restore:*)",
+      "Bash(dotnet run:*)",
+      "Bash(npx storybook@latest init:*)",
+      "Bash(pnpm storybook:*)",
+      "Bash(open http://localhost:6006)",
+      "Bash(pnpm test:*)",
+      "Bash(for:*)",
+      "Bash(do mv \"$file\" \"$file%.js.mjs\")",
+      "Bash(done)",
+      "Bash(mv:*)",
+      "Bash(do)",
+      "Bash(if [ \"$file\" != \"packages/design-system/jest.config.mjs\" ])",
+      "Bash(then)",
+      "Bash(sed:*)",
+      "Bash(fi)",
+      "Bash(pnpm:*)",
+      "Bash(open http://localhost:5173)"
+    ],
+    "deny": []
+  }
+}

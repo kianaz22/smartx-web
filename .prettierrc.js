@@ -1,0 +1,1 @@
+module.exports = require('@smartx/configs/prettier-preset');
