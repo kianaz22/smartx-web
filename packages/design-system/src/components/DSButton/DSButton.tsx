@@ -49,6 +49,14 @@ const StyledButton = styled(Button)<{ buttonVariant?: string; loading?: boolean;
     minWidth: 131,
     height: baseHeight,
     transition: 'all 0.2s ease-in-out',
+    '& .MuiButton-startIcon': {
+      marginRight: theme.direction === 'rtl' ? '8px' : 0,
+      marginLeft: theme.direction === 'rtl' ? 0 : '8px',
+    },
+    '& .MuiButton-endIcon': {
+      marginLeft: theme.direction === 'rtl' ? '8px' : 0,
+      marginRight: theme.direction === 'rtl' ? 0 : '8px',
+    },
     
     // Base contained button styles (for filled variant)
     '&.MuiButton-contained': {
