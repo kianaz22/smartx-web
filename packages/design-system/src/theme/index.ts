@@ -112,10 +112,10 @@ const lightPalette = {
   palette: {
     mode: 'light' as PaletteMode,
     primary: {
-      main: designTokens.color.light.primary[50],
-      light: designTokens.color.light.primary[60],
-      dark: designTokens.color.light.primary[30],
-      contrastText: designTokens.color.light.primary[100],
+      primary: designTokens.color.light.schemes.primary,
+      onPrimary: designTokens.color.light.schemes.onPrimary,
+      primaryContainer: designTokens.color.light.schemes.primaryContainer,
+      onPrimaryContainer: designTokens.color.light.schemes.onPrimaryContainer,
       0: designTokens.color.light.primary[0],
       5: designTokens.color.light.primary[5],
       10: designTokens.color.light.primary[10],
@@ -139,10 +139,10 @@ const lightPalette = {
       100: designTokens.color.light.primary[100],
     },
     secondary: {
-      main: designTokens.color.light.secondary[50],
-      light: designTokens.color.light.secondary[70],
-      dark: designTokens.color.light.secondary[30],
-      contrastText: designTokens.color.light.secondary[100],
+      secondary: designTokens.color.light.schemes.secondary,
+      onSecondary: designTokens.color.light.schemes.onSecondary,
+      secondaryContainer: designTokens.color.light.schemes.secondaryContainer,
+      onSecondaryContainer: designTokens.color.light.schemes.onSecondaryContainer,
       0: designTokens.color.light.secondary[0],
       5: designTokens.color.light.secondary[5],
       10: designTokens.color.light.secondary[10],
@@ -166,6 +166,10 @@ const lightPalette = {
       100: designTokens.color.light.secondary[100],
     },
     tertiary: {
+      tertiary: designTokens.color.light.schemes.tertiary,
+      onTertiary: designTokens.color.light.schemes.onTertiary,
+      tertiaryContainer: designTokens.color.light.schemes.tertiaryContainer,
+      onTertiaryContainer: designTokens.color.light.schemes.onTertiaryContainer,
       0: designTokens.color.light.tertiary[0],
       5: designTokens.color.light.tertiary[5],
       10: designTokens.color.light.tertiary[10],
@@ -189,10 +193,10 @@ const lightPalette = {
       100: designTokens.color.light.tertiary[100],
     },
     error: {
-      main: designTokens.color.light.error[50],
-      light: designTokens.color.light.error[70],
-      dark: designTokens.color.light.error[30],
-      contrastText: designTokens.color.light.error[100],
+      error: designTokens.color.light.schemes.error,
+      onError: designTokens.color.light.schemes.onError,
+      errorContainer: designTokens.color.light.schemes.errorContainer,
+      onErrorContainer: designTokens.color.light.schemes.onErrorContainer,
       0: designTokens.color.light.error[0],
       5: designTokens.color.light.error[5],
       10: designTokens.color.light.error[10],
@@ -216,10 +220,6 @@ const lightPalette = {
       100: designTokens.color.light.error[100],
     },
     neutral: {
-      main: designTokens.color.light.neutral[50],
-      light: designTokens.color.light.neutral[70],
-      dark: designTokens.color.light.neutral[10],
-      contrastText: designTokens.color.light.neutral[100],
       0: designTokens.color.light.neutral[0],
       1: designTokens.color.light.neutral[1],
       2: designTokens.color.light.neutral[2],
@@ -293,29 +293,14 @@ const lightPalette = {
       99: designTokens.color.light.accent[99],
       100: designTokens.color.light.accent[100],
     },
-    // Semantic color tokens
-    schemes: {
-      primary: designTokens.color.light.schemes.primary,
-      onPrimary: designTokens.color.light.schemes.onPrimary,
-      primaryContainer: designTokens.color.light.schemes.primaryContainer,
-      onPrimaryContainer: designTokens.color.light.schemes.onPrimaryContainer,
-      secondary: designTokens.color.light.schemes.secondary,
-      onSecondary: designTokens.color.light.schemes.onSecondary,
-      secondaryContainer: designTokens.color.light.schemes.secondaryContainer,
-      onSecondaryContainer: designTokens.color.light.schemes.onSecondaryContainer,
-      tertiary: designTokens.color.light.schemes.tertiary,
-      onTertiary: designTokens.color.light.schemes.onTertiary,
-      tertiaryContainer: designTokens.color.light.schemes.tertiaryContainer,
-      onTertiaryContainer: designTokens.color.light.schemes.onTertiaryContainer,
-      error: designTokens.color.light.schemes.error,
-      onError: designTokens.color.light.schemes.onError,
-      errorContainer: designTokens.color.light.schemes.errorContainer,
-      onErrorContainer: designTokens.color.light.schemes.onErrorContainer,
+    surface: {
       surface: designTokens.color.light.schemes.surface,
       onSurface: designTokens.color.light.schemes.onSurface,
       surfaceVariant: designTokens.color.light.schemes.surfaceVariant,
       onSurfaceVariant: designTokens.color.light.schemes.onSurfaceVariant,
       outline: designTokens.color.light.schemes.outline,
+    },
+    inverseSurface: {
       inverseSurface: designTokens.color.light.schemes.inverseSurface,
       inverseOnSurface: designTokens.color.light.schemes.inverseOnSurface,
       inversePrimary: designTokens.color.light.schemes.inversePrimary,
@@ -354,10 +339,10 @@ const darkPalette = {
   palette: {
     mode: 'dark' as PaletteMode,
     primary: {
-      main: designTokens.color.dark.primary[50],
-      light: designTokens.color.dark.primary[60],
-      dark: designTokens.color.dark.primary[30],
-      contrastText: designTokens.color.dark.primary[100],
+      primary: designTokens.color.dark.schemes.primary,
+      onPrimary: designTokens.color.dark.schemes.onPrimary,
+      primaryContainer: designTokens.color.dark.schemes.primaryContainer,
+      onPrimaryContainer: designTokens.color.dark.schemes.onPrimaryContainer,
       0: designTokens.color.dark.primary[0],
       5: designTokens.color.dark.primary[5],
       10: designTokens.color.dark.primary[10],
@@ -381,10 +366,10 @@ const darkPalette = {
       100: designTokens.color.dark.primary[100],
     },
     secondary: {
-      main: designTokens.color.dark.secondary[50],
-      light: designTokens.color.dark.secondary[70],
-      dark: designTokens.color.dark.secondary[30],
-      contrastText: designTokens.color.dark.secondary[100],
+      secondary: designTokens.color.dark.schemes.secondary,
+      onSecondary: designTokens.color.dark.schemes.onSecondary,
+      secondaryContainer: designTokens.color.dark.schemes.secondaryContainer,
+      onSecondaryContainer: designTokens.color.dark.schemes.onSecondaryContainer,
       0: designTokens.color.dark.secondary[0],
       5: designTokens.color.dark.secondary[5],
       10: designTokens.color.dark.secondary[10],
@@ -408,6 +393,10 @@ const darkPalette = {
       100: designTokens.color.dark.secondary[100],
     },
     tertiary: {
+      tertiary: designTokens.color.dark.schemes.tertiary,
+      onTertiary: designTokens.color.dark.schemes.onTertiary,
+      tertiaryContainer: designTokens.color.dark.schemes.tertiaryContainer,
+      onTertiaryContainer: designTokens.color.dark.schemes.onTertiaryContainer,
       0: designTokens.color.dark.tertiary[0],
       5: designTokens.color.dark.tertiary[5],
       10: designTokens.color.dark.tertiary[10],
@@ -431,10 +420,10 @@ const darkPalette = {
       100: designTokens.color.dark.tertiary[100],
     },
     error: {
-      main: designTokens.color.dark.error[50],
-      light: designTokens.color.dark.error[70],
-      dark: designTokens.color.dark.error[30],
-      contrastText: designTokens.color.dark.error[100],
+      error: designTokens.color.dark.schemes.error,
+      onError: designTokens.color.dark.schemes.onError,
+      errorContainer: designTokens.color.dark.schemes.errorContainer,
+      onErrorContainer: designTokens.color.dark.schemes.onErrorContainer,
       0: designTokens.color.dark.error[0],
       5: designTokens.color.dark.error[5],
       10: designTokens.color.dark.error[10],
@@ -458,10 +447,6 @@ const darkPalette = {
       100: designTokens.color.dark.error[100],
     },
     neutral: {
-      main: designTokens.color.dark.neutral[50],
-      light: designTokens.color.dark.neutral[70],
-      dark: designTokens.color.dark.neutral[10],
-      contrastText: designTokens.color.dark.neutral[100],
       0: designTokens.color.dark.neutral[0],
       1: designTokens.color.dark.neutral[1],
       2: designTokens.color.dark.neutral[2],
@@ -535,33 +520,20 @@ const darkPalette = {
       99: designTokens.color.dark.accent[99],
       100: designTokens.color.dark.accent[100],
     },
-    // Semantic color tokens
-    schemes: {
-      primary: designTokens.color.dark.schemes.primary,
-      onPrimary: designTokens.color.dark.schemes.onPrimary,
-      primaryContainer: designTokens.color.dark.schemes.primaryContainer,
-      onPrimaryContainer: designTokens.color.dark.schemes.onPrimaryContainer,
-      secondary: designTokens.color.dark.schemes.secondary,
-      onSecondary: designTokens.color.dark.schemes.onSecondary,
-      secondaryContainer: designTokens.color.dark.schemes.secondaryContainer,
-      onSecondaryContainer: designTokens.color.dark.schemes.onSecondaryContainer,
-      tertiary: designTokens.color.dark.schemes.tertiary,
-      onTertiary: designTokens.color.dark.schemes.onTertiary,
-      tertiaryContainer: designTokens.color.dark.schemes.tertiaryContainer,
-      onTertiaryContainer: designTokens.color.dark.schemes.onTertiaryContainer,
-      error: designTokens.color.dark.schemes.error,
-      onError: designTokens.color.dark.schemes.onError,
-      errorContainer: designTokens.color.dark.schemes.errorContainer,
-      onErrorContainer: designTokens.color.dark.schemes.onErrorContainer,
+
+    surface: {
       surface: designTokens.color.dark.schemes.surface,
       onSurface: designTokens.color.dark.schemes.onSurface,
       surfaceVariant: designTokens.color.dark.schemes.surfaceVariant,
       onSurfaceVariant: designTokens.color.dark.schemes.onSurfaceVariant,
       outline: designTokens.color.dark.schemes.outline,
+    },
+    inverseSurface: {
       inverseSurface: designTokens.color.dark.schemes.inverseSurface,
       inverseOnSurface: designTokens.color.dark.schemes.inverseOnSurface,
       inversePrimary: designTokens.color.dark.schemes.inversePrimary,
     },
+
     // Extended colors
     extended: {
       success: designTokens.color.dark.extended.success,
@@ -592,17 +564,39 @@ const darkPalette = {
   },
 }
 
+
+
 // Theme creation function
-const createThemeByMode = (mode: PaletteMode) => {
+const createThemeByMode = (mode: PaletteMode, direction: 'ltr' | 'rtl' = 'rtl') => {
   const palette = mode === 'dark' ? darkPalette.palette : lightPalette.palette;
-  return createTheme({ palette });
+  
+  return createTheme({
+    palette,
+    direction,
+    components: {
+      MuiCssBaseline: {
+        styleOverrides: {
+          body: {
+            direction,
+          },
+        },
+      },
+    },
+    // Add typography that respects RTL
+    typography: {
+      fontFamily: designTokens.fonts.primary + ', ' + designTokens.fonts.fallback,
+      // MUI automatically handles text alignment for RTL
+    },
+  });
 };
 
-// Default theme (light)
-export const theme = createThemeByMode('light');
+// Default theme (light with RTL)
+export const theme = createThemeByMode('light', 'rtl');
 
 // Export theme creation function for dynamic switching
 export { createThemeByMode };
+
+// RTL utilities and configurations are already exported above
 
 // Re-export theme components
 export { ThemeProvider, useTheme } from './ThemeProvider';
