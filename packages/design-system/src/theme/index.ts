@@ -89,22 +89,31 @@ declare module '@mui/material/styles' {
   }
 
   interface TypographyVariantsOptions {
-    displayL?: React.CSSProperties;
-    displayM?: React.CSSProperties;
-    displayS?: React.CSSProperties;
-    headlineL?: React.CSSProperties;
-    headlineM?: React.CSSProperties;
-    headlineS?: React.CSSProperties;
-    titleL?: React.CSSProperties;
-    titleM?: React.CSSProperties;
-    titleS?: React.CSSProperties;
-    labelL?: React.CSSProperties;
-    labelM?: React.CSSProperties;
-    labelS?: React.CSSProperties;
-    bodyL?: React.CSSProperties;
-    bodyM?: React.CSSProperties;
-    bodyS?: React.CSSProperties;
-    bodyXS?: React.CSSProperties;
+    // Display variants
+    displayLarge?: React.CSSProperties;
+    displayMedium?: React.CSSProperties;
+    displaySmall?: React.CSSProperties;
+    
+    // Headline variants
+    headlineLarge?: React.CSSProperties;
+    headlineMedium?: React.CSSProperties;
+    headlineSmall?: React.CSSProperties;
+    
+    // Title variants
+    titleLarge?: React.CSSProperties;
+    titleMedium?: React.CSSProperties;
+    titleSmall?: React.CSSProperties;
+    
+    // Label variants
+    labelLarge?: React.CSSProperties;
+    labelMedium?: React.CSSProperties;
+    labelSmall?: React.CSSProperties;
+    
+    // Body variants
+    bodyLarge?: React.CSSProperties;
+    bodyMedium?: React.CSSProperties;
+    bodySmall?: React.CSSProperties;
+    bodyXSmall?: React.CSSProperties;
   }
 }
 
@@ -589,6 +598,8 @@ const createThemeByMode = (mode: PaletteMode, direction: 'ltr' | 'rtl' = 'rtl') 
     },
   });
 };
+
+
 
 // Default theme (light with RTL)
 export const theme = createThemeByMode('light', 'rtl');
