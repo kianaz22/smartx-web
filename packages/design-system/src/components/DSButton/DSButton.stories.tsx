@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { DSButton } from './DSButton';
-import { Add, ArrowForward, Home, Settings } from '@mui/icons-material';
+import { Add, ArrowBack, Home, Settings } from '@mui/icons-material';
 
 const meta: Meta<typeof DSButton> = {
   title: 'Components/DSButton',
@@ -46,7 +46,7 @@ const meta: Meta<typeof DSButton> = {
       options: ['none', 'arrow', 'settings'],
       mapping: {
         none: undefined,
-        arrow: <ArrowForward />,
+        arrow: <ArrowBack />,
         settings: <Settings />,
       },
     },
@@ -135,7 +135,7 @@ export const WithEndIcon: Story = {
     children: 'متن دکمه',
     buttonVariant: 'filled',
     buttonSize: 'small',
-    endIcon: <ArrowForward />,
+    endIcon: <ArrowBack />,
   },
 };
 
@@ -145,6 +145,6 @@ export const WithBothIcons: Story = {
     buttonVariant: 'filled',
     buttonSize: 'small',
     startIcon: <Home />,
-    endIcon: <ArrowForward />,
+    endIcon: <ArrowBack />,
   },
 };
