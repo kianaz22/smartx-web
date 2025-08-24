@@ -22,7 +22,7 @@ export const customTypographyTheme = createTheme({
       fontSize: designTokens.typography.mobile.displayLargeSize,
       fontWeight: designTokens.typography.mobile.displayLargeWeight,
       lineHeight: designTokens.typography.mobile.displayLargeHeight + 'px',
-      [baseTheme.breakpoints.up('sm')]: {
+      [baseTheme.breakpoints.up('md')]: {
         fontSize: designTokens.typography.tablet.displayLargeSize,
         fontWeight: designTokens.typography.tablet.displayLargeWeight,
         lineHeight: designTokens.typography.tablet.displayLargeHeight + 'px',
@@ -37,7 +37,7 @@ export const customTypographyTheme = createTheme({
       fontSize: designTokens.typography.mobile.displayMediumSize,
       fontWeight: designTokens.typography.mobile.displayMediumWeight,
       lineHeight: designTokens.typography.mobile.displayMediumHeight + 'px',
-      [baseTheme.breakpoints.up('sm')]: {
+      [baseTheme.breakpoints.up('md')]: {
         fontSize: designTokens.typography.tablet.displayMediumSize,
         fontWeight: designTokens.typography.tablet.displayMediumWeight,
         lineHeight: designTokens.typography.tablet.displayMediumHeight + 'px',
@@ -52,7 +52,7 @@ export const customTypographyTheme = createTheme({
       fontSize: designTokens.typography.mobile.displaySmallSize,
       fontWeight: designTokens.typography.mobile.displaySmallWeight,
       lineHeight: designTokens.typography.mobile.displaySmallHeight + 'px',
-      [baseTheme.breakpoints.up('sm')]: {
+      [baseTheme.breakpoints.up('md')]: {
         fontSize: designTokens.typography.tablet.displaySmallSize,
         fontWeight: designTokens.typography.tablet.displaySmallWeight,
         lineHeight: designTokens.typography.tablet.displaySmallHeight + 'px',
@@ -67,7 +67,7 @@ export const customTypographyTheme = createTheme({
       fontSize: designTokens.typography.mobile.headlineLargeSize,
       fontWeight: designTokens.typography.mobile.headlineLargeWeight,
       lineHeight: designTokens.typography.mobile.headlineLargeHeight + 'px',
-      [baseTheme.breakpoints.up('sm')]: {
+      [baseTheme.breakpoints.up('md')]: {
         fontSize: designTokens.typography.tablet.headlineLargeSize,
         fontWeight: designTokens.typography.tablet.headlineLargeWeight,
         lineHeight: designTokens.typography.tablet.headlineLargeHeight + 'px',
@@ -82,7 +82,7 @@ export const customTypographyTheme = createTheme({
       fontSize: designTokens.typography.mobile.headlineMediumSize,
       fontWeight: designTokens.typography.mobile.headlineMediumWeight,
       lineHeight: designTokens.typography.mobile.headlineMediumHeight + 'px',
-      [baseTheme.breakpoints.up('sm')]: {
+      [baseTheme.breakpoints.up('md')]: {
         fontSize: designTokens.typography.tablet.headlineMediumSize,
         fontWeight: designTokens.typography.tablet.headlineMediumWeight,
         lineHeight: designTokens.typography.tablet.headlineMediumHeight + 'px',
@@ -97,7 +97,7 @@ export const customTypographyTheme = createTheme({
       fontSize: designTokens.typography.mobile.headlineSmallSize,
       fontWeight: designTokens.typography.mobile.headlineSmallWeight,
       lineHeight: designTokens.typography.mobile.headlineSmallHeight + 'px',
-      [baseTheme.breakpoints.up('sm')]: {
+      [baseTheme.breakpoints.up('md')]: {
         fontSize: designTokens.typography.tablet.headlineSmallSize,
         fontWeight: designTokens.typography.tablet.headlineSmallWeight,
         lineHeight: designTokens.typography.tablet.headlineSmallHeight + 'px',
@@ -112,7 +112,7 @@ export const customTypographyTheme = createTheme({
       fontSize: designTokens.typography.mobile.titleLargeSize,
       fontWeight: designTokens.typography.mobile.titleLargeWeight,
       lineHeight: designTokens.typography.mobile.titleLargeHeight + 'px',
-      [baseTheme.breakpoints.up('sm')]: {
+      [baseTheme.breakpoints.up('md')]: {
         fontSize: designTokens.typography.tablet.titleLargeSize,
         fontWeight: designTokens.typography.tablet.titleLargeWeight,
         lineHeight: designTokens.typography.tablet.titleLargeHeight + 'px',
@@ -127,7 +127,7 @@ export const customTypographyTheme = createTheme({
       fontSize: designTokens.typography.mobile.titleMediumSize,
       fontWeight: designTokens.typography.mobile.titleMediumWeight,
       lineHeight: designTokens.typography.mobile.titleMediumHeight + 'px',
-      [baseTheme.breakpoints.up('sm')]: {
+      [baseTheme.breakpoints.up('md')]: {
         fontSize: designTokens.typography.tablet.titleMediumSize,
         fontWeight: designTokens.typography.tablet.titleMediumWeight,
         lineHeight: designTokens.typography.tablet.titleMediumHeight + 'px',
@@ -142,7 +142,7 @@ export const customTypographyTheme = createTheme({
       fontSize: designTokens.typography.mobile.titleSmallSize,
       fontWeight: designTokens.typography.mobile.titleSmallWeight,
       lineHeight: designTokens.typography.mobile.titleSmallHeight + 'px',
-      [baseTheme.breakpoints.up('sm')]: {
+      [baseTheme.breakpoints.up('md')]: {
         fontSize: designTokens.typography.tablet.titleSmallSize,
         fontWeight: designTokens.typography.tablet.titleSmallWeight,
         lineHeight: designTokens.typography.tablet.titleSmallHeight + 'px',
@@ -157,7 +157,7 @@ export const customTypographyTheme = createTheme({
       fontSize: designTokens.typography.mobile.labelLargeSize,
       fontWeight: designTokens.typography.mobile.labelLargeWeight,
       lineHeight: designTokens.typography.mobile.labelLargeHeight + 'px',
-      [baseTheme.breakpoints.up('sm')]: {
+      [baseTheme.breakpoints.up('md')]: {
         fontSize: designTokens.typography.tablet.labelLargeSize,
         fontWeight: designTokens.typography.tablet.labelLargeWeight,
         lineHeight: designTokens.typography.tablet.labelLargeHeight + 'px',
@@ -172,7 +172,7 @@ export const customTypographyTheme = createTheme({
       fontSize: designTokens.typography.mobile.labelMediumSize,
       fontWeight: designTokens.typography.mobile.labelMediumWeight,
       lineHeight: designTokens.typography.mobile.labelMediumHeight + 'px',
-      [baseTheme.breakpoints.up('sm')]: {
+      [baseTheme.breakpoints.up('md')]: {
         fontSize: designTokens.typography.tablet.labelMediumSize,
         fontWeight: designTokens.typography.tablet.labelMediumWeight,
         lineHeight: designTokens.typography.tablet.labelMediumHeight + 'px',
@@ -187,7 +187,7 @@ export const customTypographyTheme = createTheme({
       fontSize: designTokens.typography.mobile.labelSmallSize,
       fontWeight: designTokens.typography.mobile.labelSmallWeight,
       lineHeight: designTokens.typography.mobile.labelSmallHeight + 'px',
-      [baseTheme.breakpoints.up('sm')]: {
+      [baseTheme.breakpoints.up('md')]: {
         fontSize: designTokens.typography.tablet.labelSmallSize,
         fontWeight: designTokens.typography.tablet.labelSmallWeight,
         lineHeight: designTokens.typography.tablet.labelSmallHeight + 'px',
@@ -202,7 +202,7 @@ export const customTypographyTheme = createTheme({
       fontSize: designTokens.typography.mobile.bodyLargeSize,
       fontWeight: designTokens.typography.mobile.bodyLargeWeight,
       lineHeight: designTokens.typography.mobile.bodyLargeHeight + 'px',
-      [baseTheme.breakpoints.up('sm')]: {
+      [baseTheme.breakpoints.up('md')]: {
         fontSize: designTokens.typography.tablet.bodyLargeSize,
         fontWeight: designTokens.typography.tablet.bodyLargeWeight,
         lineHeight: designTokens.typography.tablet.bodyLargeHeight + 'px',
@@ -217,7 +217,7 @@ export const customTypographyTheme = createTheme({
       fontSize: designTokens.typography.mobile.bodyMediumSize,
       fontWeight: designTokens.typography.mobile.bodyMediumWeight,
       lineHeight: designTokens.typography.mobile.bodyMediumHeight + 'px',
-      [baseTheme.breakpoints.up('sm')]: {
+      [baseTheme.breakpoints.up('md')]: {
         fontSize: designTokens.typography.tablet.bodyMediumSize,
         fontWeight: designTokens.typography.tablet.bodyMediumWeight,
         lineHeight: designTokens.typography.tablet.bodyMediumHeight + 'px',
@@ -232,7 +232,7 @@ export const customTypographyTheme = createTheme({
       fontSize: designTokens.typography.mobile.bodySmallSize,
       fontWeight: designTokens.typography.mobile.bodySmallWeight,
       lineHeight: designTokens.typography.mobile.bodySmallHeight + 'px',
-      [baseTheme.breakpoints.up('sm')]: {
+      [baseTheme.breakpoints.up('md')]: {
         fontSize: designTokens.typography.tablet.bodySmallSize,
         fontWeight: designTokens.typography.tablet.bodySmallWeight,
         lineHeight: designTokens.typography.tablet.bodySmallHeight + 'px',
@@ -247,7 +247,7 @@ export const customTypographyTheme = createTheme({
       fontSize: designTokens.typography.mobile.bodyXSmallSize,
       fontWeight: designTokens.typography.mobile.bodyXSmallWeight,
       lineHeight: designTokens.typography.mobile.bodyXSmallHeight + 'px',
-      [baseTheme.breakpoints.up('sm')]: {
+      [baseTheme.breakpoints.up('md')]: {
         fontSize: designTokens.typography.tablet.bodyXSmallSize,
         fontWeight: designTokens.typography.tablet.bodyXSmallWeight,
         lineHeight: designTokens.typography.tablet.bodyXSmallHeight + 'px',
