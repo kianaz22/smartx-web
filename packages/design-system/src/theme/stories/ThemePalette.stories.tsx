@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Box, Grid, Typography, Button, Stack } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import { useState, useEffect } from 'react';
-import { ThemeProvider, useTheme as useThemeContext } from './ThemeProvider';
+import { ThemeProvider, useTheme as useThemeContext } from '../ThemeProvider';
 
 const ColorSwatch = ({ color, name, value, width = 80 }: { color: string; name: string; value: string; width?: number; }) => (
   <Box sx={{ textAlign: 'center', mb: 2 }}>
