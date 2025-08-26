@@ -1,0 +1,11 @@
+/* Alternative: Import IRANYekanXFaNum font from CDN */
+@import url('https://fonts.googleapis.com/css2?family=IRANYekanXFaNum:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Fallback to system fonts if CDN font fails to load */
+@font-face {
+  font-family: 'IRANYekanXFaNum';
+  src: local('IRANYekanXFaNum'),
+       local('IRANYekan'),
+       local('Yekan');
+  font-display: swap;
+}

@@ -219,4 +219,8 @@ export { createThemeByMode };
 // Re-export theme components
 export { ThemeProvider, useTheme } from './ThemeProvider';
 
+// Export font CSS files
+export { default as fontsCSS } from './fonts.css';
+export { default as fontsCDN } from './fonts-cdn.css';
+
 export default theme;
