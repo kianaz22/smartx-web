@@ -186,6 +186,7 @@ const createThemeByMode = (mode: PaletteMode, direction: 'ltr' | 'rtl' = 'rtl') 
       },
     },
     typography: {
+      fontFamily: customTypographyTheme.typography.fontFamily,
       displayLarge: customTypographyTheme.typography.displayLarge,
       displayMedium: customTypographyTheme.typography.displayMedium,
       displaySmall: customTypographyTheme.typography.displaySmall,
@@ -219,8 +220,8 @@ export { createThemeByMode };
 // Re-export theme components
 export { ThemeProvider, useTheme } from './ThemeProvider';
 
-// Export font CSS files
-export { default as fontsCSS } from './fonts.css';
-export { default as fontsCDN } from './fonts-cdn.css';
+// Load font CSS files (side-effect imports)
+import './fonts.css';
+import './fonts-cdn.css';
 
 export default theme;
