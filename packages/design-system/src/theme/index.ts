@@ -222,6 +222,5 @@ export { ThemeProvider, useTheme } from './ThemeProvider';
 
 // Load font CSS files (side-effect imports)
 import './fonts.css';
-import './fonts-cdn.css';
 
 export default theme;
