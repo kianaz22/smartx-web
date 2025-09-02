@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Typography, Box, TextField, Alert, CircularProgress } from '@mui/material';
 import { DSButton, DSCard } from '@design-system/components';
 import { usePing } from '@api-client/index';

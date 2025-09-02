@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Typography, Box, TextField, Alert, CircularProgress, Rating } from '@mui/material';
 import { DSButton, DSCard } from '@design-system/components';
 import { usePing } from '@api-client/index';
@@ -10,7 +10,7 @@ function Home() {
   const [savedRating, setSavedRating] = useLocalStorage('evaluationRating', 0);
   const { data: pingData, isLoading: isPingLoading, error: pingError } = usePing();
 
-  const handleRatingChange = (_event: React.SyntheticEvent, value: number | null) => {
+  const handleRatingChange = (_event: unknown, value: number | null) => {
     setSavedRating(value || 0);
   };
 

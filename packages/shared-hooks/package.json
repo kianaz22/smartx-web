@@ -15,14 +15,14 @@
     "test": "jest"
   },
   "dependencies": {
-    "react": "^18.3.1"
+    "react": "^19.0.0"
   },
   "devDependencies": {
     "@smartx/configs": "workspace:*",
     "@testing-library/jest-dom": "^6.4.0",
-    "@testing-library/react": "^15.0.0",
-    "@testing-library/react-hooks": "^8.0.1",
-    "@types/react": "^18.3.3",
+    "@testing-library/react": "^16.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
     "eslint": "^8.57.0",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
@@ -30,6 +30,6 @@
     "typescript": "^5.5.0"
   },
   "peerDependencies": {
-    "react": "^18.0.0"
+    "react": "^19.0.0"
   }
 }

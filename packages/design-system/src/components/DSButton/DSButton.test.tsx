@@ -41,7 +41,6 @@ describe('DSButton', () => {
       </ThemeProvider>
     );
     
-    const button = screen.getByRole('button');
     const startIcon = screen.getByTestId('start-icon').parentElement;
     expect(startIcon).toHaveStyle({ marginRight: '8px' });
   });

@@ -23,11 +23,11 @@
     "@emotion/cache": "^11.14.0",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
-    "@mui/icons-material": "^7.3.1",
+    "@mui/icons-material": "^5.15.0",
     "@mui/material": "^5.15.0",
     "@mui/stylis-plugin-rtl": "^7.3.1",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "stylis": "^4.3.6"
   },
   "devDependencies": {
@@ -40,9 +40,10 @@
     "@storybook/react": "^8.2.0",
     "@storybook/react-vite": "^8.2.0",
     "@testing-library/jest-dom": "^6.4.0",
-    "@testing-library/react": "^15.0.0",
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
+    "@testing-library/react": "^16.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    
     "@types/stylis": "^4.2.7",
     "@vitejs/plugin-react": "^4.3.1",
     "eslint": "^8.57.0",
@@ -54,7 +55,7 @@
     "vite": "^5.3.4"
   },
   "peerDependencies": {
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   }
 }
