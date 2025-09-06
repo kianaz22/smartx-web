@@ -4,3 +4,4 @@ export * from './DSCard';
 export * from './DSFab';
 export * from './DSInput'
 export * from './DSDropdown'
+export * from './DSNavigation'
